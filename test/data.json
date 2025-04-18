@@ -1,0 +1,36 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "Classic White T-Shirt",
+            "price": 29.99,
+            "description": "A comfortable and stylish white t-shirt made from 100% cotton.",
+            "image": "https://source.unsplash.com/random/400x300/?tshirt",
+            "category": "Clothing"
+        },
+        {
+            "id": 2,
+            "name": "Slim Fit Jeans",
+            "price": 59.99,
+            "description": "Modern slim fit jeans with perfect stretch and comfort.",
+            "image": "https://source.unsplash.com/random/400x300/?jeans",
+            "category": "Clothing"
+        },
+        {
+            "id": 3,
+            "name": "Leather Handbag",
+            "price": 89.99,
+            "description": "Elegant leather handbag with multiple compartments.",
+            "image": "https://source.unsplash.com/random/400x300/?handbag",
+            "category": "Accessories"
+        },
+        {
+            "id": 4,
+            "name": "Running Shoes",
+            "price": 79.99,
+            "description": "Comfortable running shoes with advanced cushioning.",
+            "image": "https://source.unsplash.com/random/400x300/?shoes",
+            "category": "Footwear"
+        }
+    ]
+}

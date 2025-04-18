@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ hàng - Fashion Store</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><h1>Fashion Store</h1></a>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li><a href="index.html#products">Sản phẩm</a></li>
+                    <li><a href="cart.html" class="active">
+                        <i class="fas fa-shopping-cart"></i> Giỏ hàng 
+                            <span id="cartCount" class="cart-count">0</span>
+                    </a></li>
+                    <li><a href="login.html">
+                        <i class="fas fa-user"></i> Đăng nhập
+                    </a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="cart-section">
+        <div class="container">
+            <h2 class="section-title">Giỏ hàng của bạn</h2>
+            <div class="cart-container">
+                <div class="cart-items" id="cartItems">
+                    <!-- Cart items will be loaded here -->
+                </div>
+                <div class="cart-summary">
+                    <h3>Tổng đơn hàng</h3>
+                    <div class="summary-item">
+                        <span>Tạm tính:</span>
+                        <span id="subtotal">0 VNĐ</span>
+                    </div>
+                    <div class="summary-item">
+                        <span>Phí vận chuyển:</span>
+                        <span id="shipping">30.000 VNĐ</span>
+                    </div>
+                    <div class="summary-item total">
+                        <span>Tổng cộng:</span>
+                        <span id="total">0 VNĐ</span>
+                    </div>
+                    <button id="checkoutBtn" class="checkout-btn">Thanh toán</button>
+                    <a href="index.html" class="continue-shopping">Tiếp tục mua sắm</a>
+                </div>
+        </div>
+                </div>
+    </section>
+
+    <script src="js/cart.js"></script>
+</body>
+</html>

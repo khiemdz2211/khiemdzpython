@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Store</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Fashion Store</h1>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#" class="active">Trang chủ</a></li>
+                    <li><a href="#products">Sản phẩm</a></li>
+                    <li class="cart-dropdown">
+                        <a href="cart.html">
+                            <i class="fas fa-shopping-cart"></i> Giỏ hàng 
+                            <span id="cartCount" class="cart-count">0</span>
+                        </a>
+                        <div class="cart-preview" id="cartPreview">
+                            <div class="cart-preview-items" id="cartPreviewItems">
+                                <!-- Cart preview items will be loaded here -->
+                            </div>
+                            <div class="cart-preview-footer">
+                                <div class="cart-preview-total">
+                                    <span>Tổng cộng:</span>
+                                    <span id="cartPreviewTotal">0 VNĐ</span>
+                                </div>
+                                <a href="cart.html" class="btn-view-cart">Xem giỏ hàng</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="login.html" id="loginLink"><i class="fas fa-user"></i> Đăng nhập</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Xu hướng thời trang mới nhất</h2>
+                <p>Khám phá bộ sưu tập độc đáo và phong cách</p>
+                <a href="#products" class="btn">Mua sắm ngay</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search Section -->
+    <section class="search-section">
+        <div class="container">
+            <div class="search-container">
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Tìm kiếm sản phẩm...">
+                    <div class="price-filter">
+                        <select id="priceFilter">
+                            <option value="all">Tất cả giá</option>
+                            <option value="0-300000">Dưới 300.000 VNĐ</option>
+                            <option value="300000-500000">300.000 VNĐ - 500.000 VNĐ</option>
+                            <option value="500000-1000000">500.000 VNĐ - 1.000.000 VNĐ</option>
+                            <option value="1000000">Trên 1.000.000 VNĐ</option>
+                        </select>
+                    </div>
+                    <button id="searchButton" class="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="products">
+        <div class="container">
+            <h2 class="section-title">Sản phẩm nổi bật</h2>
+            <div class="product-grid" id="product-grid">
+                <!-- Products will be loaded here dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Về chúng tôi</h3>
+                    <p>Fashion Store - Nơi phong cách của bạn bắt đầu</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Liên hệ</h3>
+                    <p>Email: contact@fashionstore.com</p>
+                    <p>Phone: 0123-456-789</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Theo dõi chúng tôi</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Check login status and update navigation
+        document.addEventListener('DOMContentLoaded', () => {
+            const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+            const loginLink = document.getElementById('loginLink');
+            
+            if (currentUser) {
+                loginLink.innerHTML = `<i class="fas fa-user"></i> ${currentUser.name}`;
+                loginLink.href = 'profile.html';
+            }
+        });
+    </script>
+</body>
+</html>
